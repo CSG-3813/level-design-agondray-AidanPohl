@@ -17,4 +17,5 @@ Premise: You have awoken to find yourself in a dungeon cell at the bottom of Ago
 
 **Game Controls:** The player is controlled by the WASD or arrow keys to move, space to jump, and the mouse to look around.
 
-**Game Flow and Mechanics:** When the game starts the player will need to find their weapon to equip. The Player must move around the level battling enemies/puzzles in order to make their way to the final boss/treasure. When the time runs out, the player has defeated the bosses and won the treasure, or the player has lost all lives.
+**Game Flow and Mechanics:** When the game starts the player will need to find their weapon to equip. The Player must move around the level battling enemies/puzzles in order to make their way to the final boss/treasure. When the time runs out, the player has defeated the bosses and won the treasure, or the player has lost all lives. 
+
