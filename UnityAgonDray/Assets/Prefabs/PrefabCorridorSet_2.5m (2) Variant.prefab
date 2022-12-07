@@ -77,6 +77,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 868701062851440056, guid: a7a1c84def6980447b5714d5484a1574,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5990345752878087956, guid: a7a1c84def6980447b5714d5484a1574,
         type: 3}
       propertyPath: m_Mesh

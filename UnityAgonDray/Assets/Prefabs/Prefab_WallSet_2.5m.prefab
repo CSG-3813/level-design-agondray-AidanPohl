@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1823848106473554260
 Transform:
@@ -103,12 +103,17 @@ PrefabInstance:
     - target: {fileID: 671428163875186340, guid: a7a1c84def6980447b5714d5484a1574,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 5802
+      value: 5826
       objectReference: {fileID: 0}
     - target: {fileID: 868701062851440056, guid: a7a1c84def6980447b5714d5484a1574,
         type: 3}
       propertyPath: m_Name
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 868701062851440056, guid: a7a1c84def6980447b5714d5484a1574,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5990345752878087956, guid: a7a1c84def6980447b5714d5484a1574,
         type: 3}
@@ -139,6 +144,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109644552439388044, guid: 720cc8f75f93e0943b25e37040ff84a3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2202263280292698234, guid: 720cc8f75f93e0943b25e37040ff84a3,
         type: 3}

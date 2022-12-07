@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/DungeonGreyboxing.unity
+  - enabled: 0
+    path: Assets/Scenes/DungeonGreyboxing.unity
     guid: 3a1f4b6d2be2b1843b157064a30f338a
+  - enabled: 1
+    path: Assets/Scenes/LigthingFurnature.unity
+    guid: efbe1a70460e3df48890c91a7b202c21
   m_configObjects: {}

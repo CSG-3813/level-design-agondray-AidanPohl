@@ -26,4 +26,12 @@ public class AnimationTriggerCollision : MonoBehaviour
             animator.SetBool(animParameter, true);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag(targetTag))
+        {
+            animator.SetBool(animParameter, false);
+        }
+    }
 }
