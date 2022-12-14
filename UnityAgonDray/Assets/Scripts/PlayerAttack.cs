@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
         {
             attackTimer = attackCooldown;
             animator.SetTrigger(attackAnimation);
-            swordCollider.isTrigger = false;
+            swordCollider.enabled = true;
             UnityEngine.Debug.Log("Sword Active");
             Invoke("SwordEnable", 2);
 
@@ -40,7 +40,7 @@ public class PlayerAttack : MonoBehaviour
 
     void SwordEnable()
     {
-        swordCollider.isTrigger = true;
+        swordCollider.enabled = false;
         UnityEngine.Debug.Log("Sowrd Unactive");
     }
  

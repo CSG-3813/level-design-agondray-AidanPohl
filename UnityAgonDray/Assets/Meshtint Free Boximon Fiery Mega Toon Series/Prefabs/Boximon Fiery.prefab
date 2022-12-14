@@ -1036,7 +1036,7 @@ MonoBehaviour:
   animatorGO: {fileID: 1975194375736644}
   playerTag: Player
   attack: 1
-  attackCooldown: 5
+  attackCooldown: 3
 --- !u!1 &1760207043965630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1261,7 @@ MonoBehaviour:
   isTargetInSight: 0
   health: 2
   damageCooldown: 2
+  damageTimer: 0
   weaponTag: PlayerWeapon
 --- !u!1 &1992369794795074
 GameObject:

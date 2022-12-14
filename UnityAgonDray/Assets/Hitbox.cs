@@ -24,7 +24,7 @@ public class Hitbox : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             Debug.Log("Oof");
-            mainGO.GetComponent<EnemyMovementAndAttack>().TakeDamage();
+            mainGO.GetComponent<EnemyManager>().TakeDamage();
         }
     }
 }

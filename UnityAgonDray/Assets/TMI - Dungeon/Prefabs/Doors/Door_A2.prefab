@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 95608226100219440}
   - component: {fileID: 7505505871354742062}
   - component: {fileID: 2749592564484063296}
-  - component: {fileID: 2767306324723718031}
   m_Layer: 0
   m_Name: Door_A2
   m_TagString: Untagged
@@ -203,18 +202,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0318222, y: 1, z: 2.715083}
   m_Center: {x: -0.4840889, y: 1, z: 0.081326805}
---- !u!114 &2767306324723718031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877914451125544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a1c9dc54d7fbb44986e4b35f30488e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 95608226100219440}
-  targetTag: Player
-  animParameter: DoorIsOpen

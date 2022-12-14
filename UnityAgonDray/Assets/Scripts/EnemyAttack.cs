@@ -28,6 +28,7 @@ public class EnemyAttack : MonoBehaviour
         {
             animator.SetTrigger("Attack 01");
             other.gameObject.GetComponent<PlayerHealth>().Damage(attack);
+            attackTimer = attackCooldown;
         }
     }
 
