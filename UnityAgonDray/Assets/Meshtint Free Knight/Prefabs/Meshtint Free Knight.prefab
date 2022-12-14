@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 23043551975438298}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,11 +127,11 @@ GameObject:
   - component: {fileID: 23903782148961892}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4853707045179124
 Transform:
   m_ObjectHideFlags: 0
@@ -392,6 +392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d61db749a6b49a40ab668dca1c825ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swordGO: {fileID: 1016541745349246}
+  damage: 1
   attackAnimation: Attack
   attackCooldown: 1
 --- !u!1 &1087546517206048
@@ -405,7 +407,7 @@ GameObject:
   - component: {fileID: 4130332851198172}
   m_Layer: 0
   m_Name: RigLToe12
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,7 +438,7 @@ GameObject:
   - component: {fileID: 4537071480844966}
   m_Layer: 0
   m_Name: RigSpine1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -468,7 +470,7 @@ GameObject:
   - component: {fileID: 4900981806876430}
   m_Layer: 0
   m_Name: RigPelvis
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,7 +504,7 @@ GameObject:
   - component: {fileID: 4608314037208350}
   m_Layer: 0
   m_Name: RigLToe11
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,7 +536,7 @@ GameObject:
   - component: {fileID: 4989919961739744}
   m_Layer: 0
   m_Name: RigRForearm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,7 +568,7 @@ GameObject:
   - component: {fileID: 4283623453486846}
   m_Layer: 0
   m_Name: RigRToe12
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,7 +599,7 @@ GameObject:
   - component: {fileID: 4802605369912084}
   m_Layer: 0
   m_Name: RigRThigh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -629,7 +631,7 @@ GameObject:
   - component: {fileID: 4374753696260352}
   m_Layer: 0
   m_Name: RigLFoot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -661,7 +663,7 @@ GameObject:
   - component: {fileID: 4963000304920658}
   m_Layer: 0
   m_Name: RigLPalm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -694,7 +696,7 @@ GameObject:
   - component: {fileID: 137707879336973850}
   m_Layer: 0
   m_Name: Meshtint Free Knight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,7 +802,7 @@ GameObject:
   - component: {fileID: 4322069957024858}
   m_Layer: 0
   m_Name: RigLCalf
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -832,7 +834,7 @@ GameObject:
   - component: {fileID: 4418512999996838}
   m_Layer: 0
   m_Name: RigNeck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -864,7 +866,7 @@ GameObject:
   - component: {fileID: 4842746578802630}
   m_Layer: 0
   m_Name: RigSpine2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -897,7 +899,7 @@ GameObject:
   - component: {fileID: 4598805849155536}
   m_Layer: 0
   m_Name: RigRToe11
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -960,7 +962,7 @@ GameObject:
   - component: {fileID: 4058164572806388}
   m_Layer: 0
   m_Name: RigRUpperarm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -992,7 +994,7 @@ GameObject:
   - component: {fileID: 4061956425099206}
   m_Layer: 0
   m_Name: RigRPalm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1024,7 +1026,7 @@ GameObject:
   - component: {fileID: 4600044796408128}
   m_Layer: 0
   m_Name: RigLPlatform
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1055,7 +1057,7 @@ GameObject:
   - component: {fileID: 4823957856653488}
   m_Layer: 0
   m_Name: RigRCollarbone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1087,7 +1089,7 @@ GameObject:
   - component: {fileID: 4364402097286224}
   m_Layer: 0
   m_Name: RigLCollarbone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1119,7 +1121,7 @@ GameObject:
   - component: {fileID: 4734266867202460}
   m_Layer: 0
   m_Name: RigSpine3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,7 +1153,7 @@ GameObject:
   - component: {fileID: 4181736151712648}
   m_Layer: 0
   m_Name: RigLForearm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1183,7 +1185,7 @@ GameObject:
   - component: {fileID: 4660454016515262}
   m_Layer: 0
   m_Name: RigRibcage
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1217,7 +1219,7 @@ GameObject:
   - component: {fileID: 4931337058853592}
   m_Layer: 0
   m_Name: RigLUpperarm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1249,7 +1251,7 @@ GameObject:
   - component: {fileID: 4333433640312344}
   m_Layer: 0
   m_Name: RigHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1282,7 +1284,7 @@ GameObject:
   - component: {fileID: 4618325881542050}
   m_Layer: 0
   m_Name: RigRFoot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1314,7 +1316,7 @@ GameObject:
   - component: {fileID: 4905475147212918}
   m_Layer: 0
   m_Name: RigHeadBone001
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1345,7 +1347,7 @@ GameObject:
   - component: {fileID: 4951938360197658}
   m_Layer: 0
   m_Name: RigLThigh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1377,7 +1379,7 @@ GameObject:
   - component: {fileID: 4640768097204350}
   m_Layer: 0
   m_Name: Rig
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1408,7 +1410,7 @@ GameObject:
   - component: {fileID: 4062406124339472}
   m_Layer: 0
   m_Name: RigRCalf
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

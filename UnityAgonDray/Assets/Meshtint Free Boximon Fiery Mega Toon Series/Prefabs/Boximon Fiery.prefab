@@ -897,6 +897,8 @@ GameObject:
   - component: {fileID: 4114503819697490}
   - component: {fileID: 137184358506803440}
   - component: {fileID: 5031406476984328121}
+  - component: {fileID: 1532167575711048294}
+  - component: {fileID: 8844113542265243950}
   m_Layer: 3
   m_Name: Boximon Fiery
   m_TagString: Untagged
@@ -1005,6 +1007,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6064216, y: 1.1849148, z: 1.6572218}
   m_Center: {x: 0.0000024300216, y: -0.07233826, z: 0.76448065}
+--- !u!114 &1532167575711048294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726154227701254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d42c9c45b6273d41a79089424422fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainGO: {fileID: 1975194375736644}
+  targetTag: PlayerWeapon
+--- !u!114 &8844113542265243950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726154227701254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d06467898068f46be7fa08c6f50efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorGO: {fileID: 1975194375736644}
+  playerTag: Player
+  attack: 1
+  attackCooldown: 5
 --- !u!1 &1760207043965630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1215,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.7
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1202,7 +1234,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7148615787174130713
 MonoBehaviour:
@@ -1227,10 +1259,9 @@ MonoBehaviour:
   targetTag: Player
   fieldOfView: 120
   isTargetInSight: 0
-  health: 5
-  attack: 1
-  attackCooldown: 5
-  damageCooldown: 1
+  health: 2
+  damageCooldown: 2
+  weaponTag: PlayerWeapon
 --- !u!1 &1992369794795074
 GameObject:
   m_ObjectHideFlags: 0

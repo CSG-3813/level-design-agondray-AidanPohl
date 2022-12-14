@@ -9,6 +9,7 @@
  */
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
@@ -35,13 +36,16 @@ public class EnemyMovementAndAttack : MonoBehaviour
     private SphereCollider sightBubble;
     [Header("Combat")]
     public int health = 5;
-    public int attack = 1;
-    public float attackCooldown = 5;
-    public float damageCooldown = 1;
-    private float attackTimer = 0;
+    public float damageCooldown = 2;
+    public float damageTimer=0;
+    public string weaponTag;
+    private LayerMask sightMask; 
+    
 
     private void Awake()
     {
+        sightMask = 4;
+        sightMask = ~sightMask;
         thisAgent = GetComponent<NavMeshAgent>();
         sightBubble = GetComponent<SphereCollider>();
     }
@@ -56,9 +60,8 @@ public class EnemyMovementAndAttack : MonoBehaviour
     void Update()
     {
         animator.SetBool(runAnimation, !thisAgent.isStopped);
-        attackTimer -= Time.deltaTime;
-        if(attackTimer< 0 ) {
-        }
+        damageTimer -= Time.deltaTime;
+
     }
 
     public void OnTriggerStay(Collider other)
@@ -66,7 +69,8 @@ public class EnemyMovementAndAttack : MonoBehaviour
         //Debug.Log("Something in Range");
         if (other.CompareTag(targetTag))
         {
-            //Debug.Log("Player in Range");
+            //Debug.Log(other.gameObject.name + " in Range of "+this.gameObject.name);
+            //Debug.Log(other.transform.position);
             UpdateSight(other.transform);
         }
     }
@@ -84,7 +88,7 @@ public class EnemyMovementAndAttack : MonoBehaviour
         isTargetInSight = ClearLineOfSight(target) && TargetInFOV(target);
         if (isTargetInSight)
         {
-            Debug.Log("PlayerSighted");
+            //Debug.Log("PlayerSighted");
             lastKnownSighting = target.position;
             thisAgent.SetDestination(lastKnownSighting); //updates where the agent wants to go;
         }
@@ -100,7 +104,7 @@ public class EnemyMovementAndAttack : MonoBehaviour
         float angle = Vector3.Angle(eyePoint.forward, directionToTarget);
         if (angle <= fieldOfView)
         {
-            Debug.Log("Target in FOV");
+            //Debug.Log("Target in FOV");
             return true;
         }
         else
@@ -110,21 +114,44 @@ public class EnemyMovementAndAttack : MonoBehaviour
     }//end TargetInFOV(Transform)
 
     private bool ClearLineOfSight(Transform target)
-    {
+    { //Debug.Log("Updating sight of " +this.gameObject.name);
         RaycastHit hit;
         Vector3 targetcenter = target.position;
-        targetcenter.y += 1;
+        //targetcenter.y += 1;
         Vector3 dirToTarget = (targetcenter - eyePoint.position).normalized;
-        if (Physics.Raycast(eyePoint.position, dirToTarget, out hit, sightBubble.radius, 0))
+        if (Physics.Raycast(eyePoint.position, dirToTarget, out hit, sightBubble.radius))
         {
             Debug.DrawLine(eyePoint.position, hit.point);
-            Debug.Log("Hit " + hit.transform.gameObject.name);
+            //Debug.Log("Hit " + hit.transform.gameObject.name);
             if (hit.transform.CompareTag(targetTag))
             {
-                Debug.Log("TARGET FOUND!!");
+                //Debug.Log("TARGET FOUND!!");
                 return true;
             }
         }
         return false;
     }
+
+public void TakeDamage()
+    {
+        Debug.Log(this.gameObject.name + " was hurt!");
+        if (damageTimer <= 0)
+        {
+            health--;
+            damageTimer = damageCooldown;
+            if (health <= 0)
+            {
+                animator.SetTrigger("Die");
+                Invoke("Death", 2);
+            }
+            else { animator.SetTrigger("Take Damage"); }
+        }
+    }
+
+    private void Death()
+    {
+        Destroy(this.gameObject);
+    }
 }
+
+
